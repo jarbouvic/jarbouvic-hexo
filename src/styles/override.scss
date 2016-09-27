@@ -1,0 +1,105 @@
+
+@media (min-width: 600px) {
+    body {
+        justify-content: flex-start;
+    }
+}
+
+.me {
+        background-image: url(/img/halfvic.jpg);
+        background-repeat: no-repeat;
+        background-size: 10vw;
+        background-position-y: 100px;
+}
+
+section {
+
+    &.header {
+        nav {
+            font-size: 14px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+            ul {
+                list-style: none;
+                text-align: center;
+                display: inline-flex;
+                li {
+                    margin-left: 6px;
+                    margin-right: 6px;
+                    a {
+                        padding-top: 2px ;
+                        padding-bottom: 2px ;
+                        color: #555555;
+                    }
+                    font-weight: 500;
+                    transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+                    
+                }
+                li.active {
+                    a {
+                        color: #555555;
+                        border-bottom: solid 1px #111111;
+                    }
+                }
+                li:first-child {
+                    margin-left: 0;
+                }
+                li:last-child {
+                    margin-right: 0;
+                }
+                li:hover {
+                    a {
+                        color: #111111;
+                        border-top: solid 1px #111111;
+                    }
+                    
+                }
+            }
+        }
+    } 
+
+    &.main {
+        .container {
+            .content {
+                .markdown {
+                    ul {
+                        display: table;
+                        margin-left: 0;
+                        padding-left: 0;
+                        list-style: none;
+                    }
+                    ul > li {
+                        display: table-row;
+                        
+                    }
+                    ul li::before {
+                        content: "•";
+                        display: table-cell; /* aha! */
+                        padding-right: 1em
+                    }
+                }
+                .post-item {
+                    
+                    .item-link {
+                        ul.categories {
+                            display: inline-flex;
+                            list-style: none;
+
+                            li {
+                                font-size: 14px;
+                                content: "#";
+                                margin-left: 1em;
+
+                                a {
+                                    color: #999;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

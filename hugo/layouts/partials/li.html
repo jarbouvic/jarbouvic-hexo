@@ -1,0 +1,11 @@
+<li class="post-item">
+    <div class="meta">{{ .Date.Format .Site.Params.DateForm }}</div>
+    <div class="item-link">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <ul class="categories">
+        {{ range .Params.categories }}
+            <li><a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+        </ul>
+    </div>
+</li>
