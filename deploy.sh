@@ -8,6 +8,8 @@ cd hugo
 # Build the project.
 hugo -t cocoa # if using a theme, replace by `hugo -t <yourtheme>`
 
+pwd
+
 # Go To Public folder
 cd public
 # Add changes to git.
