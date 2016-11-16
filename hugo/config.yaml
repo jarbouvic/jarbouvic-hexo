@@ -1,49 +1,30 @@
-baseurl: https://jarbouvic.github.io
-canonifyurls: true
+Baseurl: https://jarbouvic.github.io
+Title: Victor Moreau
+LanguageCode: en-us
+GoogleAnalytics : XXX
+DisqusShortname: jarbouvic # Comment out to disable Disqus.
+Author:
+    Name: Victor Moreau
 
-author: Victor Moreau
-title: Victor Moreau
-
-languageCode: en-us
-contentdir: content
-layoutdir: layouts
-publishdir: public
-pygmentsuseclasses: true
-disqusShortname: jarbouvic # Comment out to disable Disqus.
-pluralizelisttitles: false
-MetaDataFormat: yaml
-
-permalinks:
+Permalinks:
     fixed: :title/
-    blog: blog/:slug/
+    post: blog/:slug/
 
 params:
-    Author: "Victor Moreau"
-    CacheBuster: true
     DateForm: Jan 2, 2006
     DateFormFull: Mon Jan 2 2006 15:04:05 MST
-    Description: Don't panic
     Email: jarbouvic@gmail.com
-    FaviconFile: img/leaf.ico
-    GATracker: "XYZ"
+    FaviconFile: /img/leaf.ico
     GitHub: //github.com/jarbouvic
-    HighlightJS: true
-    Lang: en
     LinkedIn: //linkedin.com/in/jarbouvic
     Twitter: //twitter.com/jarbouvic
-    ExtraCssFiles:
-        - /css/override.css
+    Logo:
+        Url: /img/gravatar.jpg
+        Title: Victor
+    Intro: true
 
 taxonomies:
     tag: "tags"
     category: "categories"
-
-menu:
-    main:
-        - Name: "Life"
-          Identifier: "life"
-          URL: "/life/"
-        - Name: "Code"
-          Identifier: "code"
-          URL: "/code/"
+    language: "language"
 ...

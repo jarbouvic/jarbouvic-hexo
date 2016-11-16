@@ -1,0 +1,22 @@
+footer {   
+    background-color: $footer-color;
+
+    #footer-wrapper {
+        margin-top: 1rem;
+        color: #ddd;
+
+        a {
+            color: #ccc;
+        }
+
+        p {
+            margin:0;
+        }
+
+        .footer-copyright {
+            float: right;
+        }
+      
+        @extend %clearfix;
+    }
+}

@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<div id="post-index" class="container" itemscope="" itemtype="https://schema.org/Blog">
+    <ol class="post-list">
+        {{ $pag := .Paginate (where .Data.Pages "Section" "posts") }}
+        {{ range $pag.Pages }}
+            {{ partial "post-stub.html" . }}
+        {{ end }}
+    </ol>
+    {{ partial "pagination.html" . }}
+</div>
+
+{{ partial "footer.html" . }}

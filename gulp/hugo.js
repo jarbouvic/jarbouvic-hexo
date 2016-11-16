@@ -10,9 +10,9 @@ function hugo(drafts) {
 
     gutil.log('src: ' + src);
 
-    var cmd = 'hugo server -t cocoa -s ' + src ;
+    var cmd = 'hugo server -t perso -s ' + src ;
     if (drafts) {
-        cmd += ' --buildDrafts=true --verbose=true ';
+        cmd += ' --buildDrafts=true --verbose';
     }
 
     var child = spawn(cmd, {encoding: 'utf-8'});

@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+
+<div id="post-index" itemscope="" itemtype="https://schema.org/Blog">
+    {{ if .Site.Params.intro }}
+        {{ partial "intro.html" . }}
+    {{ end }}
+    <h4>Last posts</h4>
+    <ol class="post-list">
+        {{ range first 5 (where .Data.Pages "Section" "posts") }}
+            {{ partial "post-stub.html" . }}
+        {{ end }}
+    </ol>
+
+</div>
+
+{{ partial "footer.html" . }}
