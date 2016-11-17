@@ -2,16 +2,8 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Go To Hugo folder
-cd hugo
-
-# Build the project.
-hugo -t cocoa # if using a theme, replace by `hugo -t <yourtheme>`
-
-pwd
-
 # Go To Public folder
-cd public
+cd hugo/public
 # Add changes to git.
 git add -A
 

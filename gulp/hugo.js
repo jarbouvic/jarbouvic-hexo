@@ -4,16 +4,16 @@ var gutil = require('gulp-util');
 var path = require('path');
 var del = require('del');
 
-function hugo(drafts) {
+function hugo(publish) {
     var src = path.join(process.cwd(), 'hugo');
-    var dst = path.join(process.cwd(), 'public');
+    var dst = path.join(process.cwd(), 'hugo/public');
 
     gutil.log('src: ' + src);
 
-    var cmd = 'hugo server -t perso -s ' + src ;
-    if (drafts) {
-        cmd += ' --buildDrafts=true --verbose';
-    }
+    var cmd = 'hugo'; 
+    cmd += (publish) ? ' -d ' + dst : ' server';
+    cmd += ' -t perso -s '+ src;
+    cmd += (publish) ? '' : ' --buildDrafts --verbose';
 
     var child = spawn(cmd, {encoding: 'utf-8'});
 
@@ -27,10 +27,10 @@ function hugo(drafts) {
 
 }
 
-gulp.task('hugo:draft', function() {
+gulp.task('hugo:public', ['build'], function() {
     hugo(true);
 });
 
-gulp.task('hugo:all', ['build:all'], function() {
-    hugo(true);
+gulp.task('hugo:serve', ['build'], function() {
+    hugo(false);
 });
