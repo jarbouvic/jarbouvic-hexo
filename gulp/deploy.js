@@ -1,19 +1,37 @@
 var gulp = require('gulp');
-var spawn = require('child_process').exec;
-var gutil = require('gulp-util');
+var git = require('gulp-git');
+var run = require('gulp-run');
+var exec = require('child_process').exec;
 
-function deploy() {
-    var cmd = 'deploy.sh'; 
 
-    var child = spawn(cmd, {encoding: 'utf-8'});
+gulp.task('git-add', function(cb) {
+  exec('git add --all .', function(err) {
+    if (err) return cb(err); // return error
+    cb(); // finished task
+  });
+});
 
-    child.stdout.on('data', function (data) {
-        gutil.log('hugo: \n' + data);
-    });
+gulp.task('git-commit', ['git-add'], function(cb) {
+  exec('git commit -m "test"', function(err) {
+    if (err) return cb(err); // return error
+    cb(); // finished task
+  });
+});
 
-    child.stderr.on('data', function (data) {
-        gutil.log('hugo: \n' + data);
-    });
-}
+function git_add(msg) {
+    return gulp.src('.')
+        .pipe(git.add())
+        .pipe(git.commit(msg))
+        .pipe(git.push('origin', 'master', function (err) {
+            if (err) throw err;
+        }));
+};
 
-gulp.task('deploy', deploy());
+function git_run(msg) {
+    return run('echo').exec(msg, callback);
+};
+
+
+gulp.task('deploy', ['git-commit'], function() {
+    process.chdir('hugo/public');
+});
