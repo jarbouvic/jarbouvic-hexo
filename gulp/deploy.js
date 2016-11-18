@@ -1,24 +1,11 @@
 var gulp = require('gulp');
-var git = require('gulp-git');
 var run = require('gulp-run');
+var gutil = require('gulp-util');
 var exec = require('child_process').exec;
 
-
-gulp.task('git-add', function(cb) {
-  run('git add --all .').exec('', cb)
-  .pipe(gulp.dest('output'));
-});
-
-gulp.task('git-commit', ['git-add'], function(cb) {
-  run('git commit -m "test"').exec('', cb)
-  .pipe(gulp.dest('output'));
-});
-
-gulp.task('git-push', ['git-commit'], function(cb) {
-  run('git push origin master').exec('', cb)
-  .pipe(gulp.dest('output'));
-});
-
-gulp.task('deploy', ['git-push'], function() {
-    process.chdir('hugo/public');
+gulp.task('git-push', function(cb) {
+    var msg= "test";
+    exec('git add --all . & git commit -m ' + msg + ' & git push origin master', function(err, stdin, stdout) {
+        cb(err);
+    });
 });
