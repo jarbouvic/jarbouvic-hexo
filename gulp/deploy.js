@@ -18,6 +18,13 @@ gulp.task('git-commit', ['git-add'], function(cb) {
   });
 });
 
+gulp.task('git-push', ['git-commit'], function(cb) {
+  exec('git push origin master', function(err) {
+    if (err) return cb(err); // return error
+    cb(); // finished task
+  });
+});
+
 function git_add(msg) {
     return gulp.src('.')
         .pipe(git.add())
@@ -32,6 +39,6 @@ function git_run(msg) {
 };
 
 
-gulp.task('deploy', ['git-commit'], function() {
+gulp.task('deploy', ['git-push'], function() {
     process.chdir('hugo/public');
 });
