@@ -19,7 +19,7 @@ gulp.task('git-commit', ['git-add'], function(cb) {
 });
 
 gulp.task('git-push', ['git-commit'], function(cb) {
-  exec('git push origin master', function(err) {
+  exec('ssh-agent bash -c "ssh-add C:\Users\Victor\.ssh\id_rsa; git push origin master"', function(err) {
     if (err) return cb(err); // return error
     cb(); // finished task
   });
