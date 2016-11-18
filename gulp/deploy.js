@@ -15,10 +15,8 @@ gulp.task('git-commit', ['git-add'], function(cb) {
 });
 
 gulp.task('git-push', ['git-commit'], function(cb) {
-  run('git push origin master', function(err) {
-    if (err) return cb(err); // return error
-    cb(); // finished task
-  });
+  run('git push origin master').exec('', cb)
+  .pipe(gulp.dest('output'));
 });
 
 gulp.task('deploy', ['git-push'], function() {
