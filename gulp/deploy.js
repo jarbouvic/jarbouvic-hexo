@@ -16,4 +16,4 @@ function deploy() {
     });
 }
 
-gulp.task('deploy', ['hugo:public'], deploy());
+gulp.task('deploy', deploy());
