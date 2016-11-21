@@ -10,3 +10,8 @@ gulp.task('styles', function() {
         .pipe(cleancss({advanced:false}))
         .pipe(gulp.dest('hugo/themes/perso/static/css'));
 });
+
+
+gulp.task('styles:watch',function() {    //gulp.watch(['hugo/themes/perso/src/*'], ['build:all']);
+    gulp.watch(['hugo/themes/perso/src/scss/*'], ['styles']);
+});
