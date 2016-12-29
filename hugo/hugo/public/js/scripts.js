@@ -1,1 +1,0 @@
-hljs.initHighlightingOnLoad(),$(document).ready(function(){function o(){$(window).scrollTop()>n.top?$("#wrapper").addClass("scrolled"):$("#wrapper").removeClass("scrolled")}var n=$("#site-nav").offset();window.onscroll=o;var e;window.onresize=function(){clearTimeout(e),e=setTimeout(function(){n=$("#site-nav").offset(),o()},200)}});

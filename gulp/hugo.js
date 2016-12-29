@@ -7,7 +7,7 @@ function hugo_dev(cb) {
 }
 
 function hugo_prod(cb) {
-    shell.exec('hugo -t perso -s .\\hugo -d .\\hugo\\public', cb);
+    shell.exec('hugo -t perso -s .\\hugo -d .\\public', cb);
 }
 
 gulp.task('hugo:prod', ['build'], function(cb) {
