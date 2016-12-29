@@ -1,3 +1,0 @@
-[submodule "hugo/public"]
-	path = hugo/public
-	url = git@github.com:jarbouvic/jarbouvic.github.io.git
