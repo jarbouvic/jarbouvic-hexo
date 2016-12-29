@@ -1,0 +1,31 @@
+{
+  "name": "jarbouvic-hugo",
+  "version": "0.1.0",
+  "description": "website",
+  "author": "Victor",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "browser-sync": "^2.12.5",
+    "cssmin": "^0.4.3",
+    "del": "^2.2.0",
+    "jshint": "^2.9.2",
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "postcss": "^5.2.5",
+    "postcss-cli": "^2.6.0",
+    "require-dir": "^0.3.0",
+    "rev-del": "^1.0.5",
+    "run-sequence": "^1.2.2",
+    "watch": "^1.0.1",
+    "yargs": "^6.4.0"
+  },
+  "scripts": {
+    "prebuild-css": "node-sass --include-path src/scss src/scss/style.scss dist/css/style.css",
+    "build-css": "autoprefixer -b 'last 2 version' < dist/css/style.css",
+    "gulp": "gulp",
+    "hugo-dev": "hugo server -wv -t perso -s .\\hugo --buildDrafts",
+    "hugo-prod": "hugo -t perso -s .\\hugo -d .\\hugo\\public"
+  }
+}

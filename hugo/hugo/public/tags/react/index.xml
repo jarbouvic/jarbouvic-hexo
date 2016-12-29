@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Victor Moreau</title>
+    <link>https://jarbouvic.github.io/tags/react/index.xml</link>
+    <description>Recent content on Victor Moreau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://jarbouvic.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>React makes me resent AngularJS</title>
+      <link>https://jarbouvic.github.io/posts/2016-09-26-react-vs-angularjs/</link>
+      <pubDate>Tue, 27 Sep 2016 11:00:46 +0700</pubDate>
+      
+      <guid>https://jarbouvic.github.io/posts/2016-09-26-react-vs-angularjs/</guid>
+      <description>&lt;p&gt;Just went through the React official &lt;a href=&#34;https://facebook.github.io/react/docs/tutorial.html&#34;&gt;tutorial&lt;/a&gt; and I am amazed by the simplicity of the framework as opposed to the unassumed complexity of AngularJS. I played mentally with it for 5 minutes and it just feels like a box of Legos™ where each block has its own obvious shape and role and can be used independently of the others. At first sight, working with React looks like a simple game of fitting blocks inside each others, allowing you to build anything from the simplest of structure to the most intricate work of art.&lt;/p&gt;
+
+&lt;p&gt;To be fair, I haven&amp;rsquo;t even written one line of code yet with React, yet it feels natural and straightforward. I remember going through Angular tutorials amazed by how it seemed to just magically work but unable to fully grasp the bigger picture. Every component of the framework felt it had roots growing all the way to some obscure foundation which would require weeks to understand and master. I felt overwhelmed by the amount of conventions and setup to go through before being able to build a simple app.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s some of the frustration I went through:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What&amp;rsquo;s this magical &lt;code&gt;$scope&lt;/code&gt; doing ? How the heck should it be used when everyone says it&amp;rsquo;s potentially a time-bomb ? But it&amp;rsquo;s everywhere in the tutorials&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$digest&lt;/code&gt; what ? Wait, it sometimes work, sometimes &lt;em&gt;doesn&amp;rsquo;t&lt;/em&gt;?&lt;/li&gt;
+&lt;li&gt;The inconspicuous binding between javascript camelCase and kebab-case DOM element names: I mean it took me a full day to understand why my &lt;code&gt;simpleDirective&lt;/code&gt; would simply just not work with my &lt;code&gt;&amp;lt;SimpleDirective&amp;gt;&lt;/code&gt; element! And it still kind of feels like black magic today.&lt;/li&gt;
+&lt;li&gt;IIFE ? Really ? What&amp;rsquo;s this &lt;code&gt;$inject&lt;/code&gt; non-sense ? Do I really need &lt;em&gt;that&lt;/em&gt; everywhere in my code ?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;(function() {
+    var MyController = function($scope, greeter) {
+        // ...
+    }
+    MyController.$inject = [&#39;$scope&#39;, &#39;greeter&#39;];
+    someModule.controller(&#39;MyController&#39;, MyController);
+})();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No componentization (pre 1.5)? So what should a module do ? What should an app do then ? How should I organize my code ? Put all my controllers together, my directives together, my templates together, my filters together ? It wants to be MVC yes, but it doesn&amp;rsquo;t feel right&amp;hellip;&lt;/li&gt;
+&lt;li&gt;jqLite ? So Angular even went ahead and slashed jQuery to fit its needs only ?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All in all, to develop in AngularJS it seems you have to go through a full month of head-banging on the table before you can manage to have something running by something else than just pure magic. I understand that AngularJS was built at a time where alternatives did not exist and it had to fight against browsers to run properly before ES5 support. It is pretty impressive in itself and can definitely be used to build rich and complex web applications.&lt;/p&gt;
+
+&lt;p&gt;But encountering React has made me feel like I&amp;rsquo;ve been abused of by AngularJS. Why all the pain ? Why the throbbing headaches ? I get that React does not have the same approach and is built as a library rather than a framework. This makes learning React more of a step-by-step experience, which makes it much easier to grasp. Nevertheless, shouldn&amp;rsquo;t it be the way to go for frameworks too ? Shouldn&amp;rsquo;t frameworks be essentially composed of loosely-coupled modules or libraries rather than one big monolithic, multi-layer block ? There&amp;rsquo;s a reason why we love Legos™, that&amp;rsquo;s because it makes building stuff a lot more easy and enjoyable. Not blaming AngularJS though, it does (did ?) serve a purpose, but wow, how I enjoy the breeze that React blows my way!&lt;/p&gt;
+
+&lt;p&gt;PS: I know that Angular 2 has addressed most of the downfalls of AngularJS, but it&amp;rsquo;s apparently still one big monolith. Not sure I&amp;rsquo;m ready to embark on another hell-bent journey to learn it from scratch again&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

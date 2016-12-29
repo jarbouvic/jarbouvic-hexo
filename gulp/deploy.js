@@ -24,5 +24,5 @@ gulp.task('git:publish', function(cb) {
 });
 
 gulp.task('deploy', function(cb) {
-    runSequence('hugo:public','git:push', 'git:publish',cb);
+    runSequence('hugo:prod','git:push', 'git:publish',cb);
 });

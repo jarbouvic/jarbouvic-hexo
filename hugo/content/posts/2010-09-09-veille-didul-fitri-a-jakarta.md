@@ -1,7 +1,5 @@
 ---
-
 title: "Veille d'Idul Fitri a Jakarta"
-
 date: 2010-09-09T12:06:00+00:00
 comments: false
 categories: 

@@ -1,0 +1,26 @@
+footer {   
+    background-color: $footer-color;
+
+    #footer-wrapper {
+        margin: 1rem 0 0 0;
+        color: $note-color;
+
+        a {
+            color: $note-highlight-color;
+        }
+
+        p {
+            margin:0;
+        }
+
+        .footer-left {
+            float: left;
+        }
+
+        .footer-right {
+            float: right;
+        }
+      
+        @extend %clearfix;
+    }
+}

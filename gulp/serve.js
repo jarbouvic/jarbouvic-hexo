@@ -1,7 +1,11 @@
 var gulp        = require("gulp");
 
-gulp.task('serve', ['hugo:serve'], function() {
-    //gulp.watch(['hugo/themes/perso/src/*'], ['build:all']);
-    gulp.watch(['hugo/themes/perso/src/scss/*'], ['styles']);
-    gulp.watch(['hugo/themes/perso/src/js/*'], ['scripts']);
+gulp.task('serve', ['hugo:dev'], function () {
+    gulp.watch(['src/scss/*'], ['styles']);
+    gulp.watch(['src/js/*'], ['scripts']);
+});
+
+gulp.task('watch', function () {
+    gulp.watch(['src/scss/*'], ['styles']);
+    gulp.watch(['src/js/*'], ['scripts']);
 });

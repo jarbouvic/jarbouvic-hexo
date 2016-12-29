@@ -1,13 +1,3 @@
-<div class="post-footer clearfix">
-    {{ if .Params.tags }}
-        <p class="post-tags">
-            <span>Tagged:</span>
-            {{ range .Params.tags }}
-                 <a href="/tags/{{ . | urlize }}/">{{ . }}</a>
-            {{ end }}
-        </p>
-    {{ end}}
-
     <div class="share">
         <a class="icon-twitter" href="https://twitter.com/share?text={{ .Title }}&url={{ .Permalink }}"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -27,4 +17,3 @@
             <span class="hidden">Google+</span>
         </a>
     </div>
-</div>

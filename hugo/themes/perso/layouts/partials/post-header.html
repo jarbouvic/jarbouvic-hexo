@@ -1,9 +1,18 @@
-<div class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
-    {{ if .Description }}
-        <p class="post-description" itemprop="description">{{ .Description }}</p>
+    <a class="post-link stop" href="{{ .Permalink }}" itemprop="mainEntityOfPage url" title="Go to post detail">
+        <time class="post-date" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">
+            <span class="year">{{ .Date.Year }}</span>
+            <span class="month">{{ .Date.Format "Jan 2" | upper }}</span>
+        </time> 
+        <h2 class="stop-name" itemprop="name headline">{{ .Title }}</h2> 
+    </a>
+    <ul class="tags">
+    {{ range .Params.categories }} 
+        <li class="category"><meta itemprop="section" content="{{ . }}"> 
+        <a class="font_small" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="Category : {{ . }}">
+        <i class="font-small fa{{ if eq . "tech" }} fa-laptop{{ else if eq . "life"}} fa-user-o{{ else }} fa-square-thin{{ end }}"></i> {{ . }}
+        </a></li>
     {{ end }}
-    <p class="post-date">
-        <span>Published <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
-    </p>
-</div>
+    {{ range .Params.tags }}
+        <li class="tag"><a class="font_small" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"  title="Tag : {{ . }}">#{{ . }}</a></li>
+    {{ end }}
+    </ul>

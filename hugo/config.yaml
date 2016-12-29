@@ -27,4 +27,22 @@ taxonomies:
     tag: "tags"
     category: "categories"
     language: "language"
+
+Paginate: 5
+
+SectionPagesMenu: "main"
+Menu:
+    main:
+        - Name: "Me"
+          Weight: 1
+          Identifier: "about"
+          URL: "/about/"
+        - Name: "Blog"
+          Weight: 2
+          Identifier: "posts"
+          URL: "/posts/"
+        - Name: "Work"
+          Weight: 3
+          Identifier: "work"
+          URL: "/work/"
 ...

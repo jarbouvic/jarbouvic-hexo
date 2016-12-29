@@ -1,7 +1,8 @@
-<div class="post-content clearfix" itemprop="articleBody">
-    {{ with .Params.Image }}
-        <img class="post-featured-image" src="{{ . }}">
+    {{ range .Params.images }}
+    <figure>
+        <img class="post-image" itemprop="image" src="{{ . }}" />
+        <figcaption><h4>Test</h4></figcaption>
+    </figure>
+        
     {{ end }}
-
     {{ .Content }}
-</div>

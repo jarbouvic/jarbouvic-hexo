@@ -1,0 +1,46 @@
+    {{ $pag := .Paginate .Data.Pages }}
+    <div class="tube-line top">
+    </div>
+    {{ if .Data.Singular -}}
+    <div class="tube-line taxonomy start">
+        <a class="station active" href="#" title="Go to previous page">
+            <span class="stop-name">{{ title .Data.Singular }} : {{ lower .Title}}</soan>
+        </a>
+    </div>
+    {{- end }}
+    {{ if $pag.HasPrev -}}
+    <div class="tube-line prev">
+        <a class="stop" href="{{ $pag.Prev.URL }}" title="Go to previous page" >
+            <span class="stop-name">Newer posts...</span>
+        </a>
+        <div class="breaker"></div>
+    </div>
+    {{- end }}
+    {{ range $pag.Pages }}
+        <article class="tube-line" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+            <div class="post-header">
+                {{ partial "post-header.html" . }}
+            </div>
+            <div class="post-content" itemprop="articleBody">
+                {{ partial "post-content.html" . }}
+            </div>
+            <div class="post-footer">
+                {{ partial "post-footer.html" . }}
+            </div>
+        </article>
+    {{ end }}
+    {{ if $pag.HasNext -}}
+    <div class="tube-line next">
+        <div class="breaker"></div>
+        <a class="stop" href="{{ $pag.Next.URL }}" title="Go to next page" >
+            <span class="stop-name">Older posts...</span>
+        </a>
+    </div>
+    {{- else -}}
+    <div class="tube-line end">
+        <a class="last-stop" href="#">
+            <span class="stop-name">End of line</span>
+        </a>
+    </div>
+    {{- end }}
+    

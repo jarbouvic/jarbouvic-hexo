@@ -1,13 +1,8 @@
 {
-  "name": "hugulp",
-  "version": "0.2.0",
+  "name": "jarbouvic-hugo",
+  "version": "0.1.0",
   "description": "website",
-  "main": "index.js",
-  "scripts": {
-    "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Juan B. Rodriguez",
+  "author": "Victor",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.12.5",
@@ -33,5 +28,10 @@
     "rev-del": "^1.0.5",
     "run-sequence": "^1.2.2",
     "yargs": "^6.4.0"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "hugo-dev": "hugo server -wv -t perso -s .\\hugo --buildDrafts",
+    "hugo-prod": "hugo -t perso -s .\\hugo -d .\\hugo\\public"
   }
 }

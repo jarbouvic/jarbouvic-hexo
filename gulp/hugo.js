@@ -1,24 +1,19 @@
 var gulp = require('gulp');
 var shell = require('./tools/shellHelper');
 var path = require('path');
-var del = require('del');
 
-function hugo(publish, cb) {
-    var src = path.join(process.cwd(), 'hugo');
-    var dst = path.join(process.cwd(), 'hugo/public');
-
-    var cmd = 'hugo'; 
-    cmd += (publish) ? ' -d ' + dst : ' server';
-    cmd += ' -t perso -s '+ src;
-    cmd += (publish) ? '' : ' --buildDrafts --verbose';
-
-    shell.exec(cmd, cb)
+function hugo_dev(cb) {
+    shell.exec('hugo server -wv -t perso -s .\\hugo --buildDrafts --ignoreCache', cb);
 }
 
-gulp.task('hugo:public', ['build'], function(cb) {
-    hugo(true, cb);
+function hugo_prod(cb) {
+    shell.exec('hugo -t perso -s .\\hugo -d .\\hugo\\public', cb);
+}
+
+gulp.task('hugo:prod', ['build'], function(cb) {
+    hugo_prod(cb);
 });
 
-gulp.task('hugo:serve', ['build'], function(cb) {
-    hugo(false, cb);
+gulp.task('hugo:dev', ['build'], function(cb) {
+    hugo_dev(cb);
 });

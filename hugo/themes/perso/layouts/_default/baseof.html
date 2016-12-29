@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {{ block "head" . }}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ .Title }} &middot; {{ .Site.Author.name }}</title>
+        <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        {{ .Hugo.Generator }}
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://fonts.googleapis.com/css?family=Raleway:600,900|Roboto" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{ end }}
+    </head>
+    <body>
+        <div id="wrapper">
+            
+            {{ block "header" . }}
+            <header>
+                <div id="header-wrapper">
+                    <div id="site-title">
+                        <h1>
+                            <a title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                            <span><a data-hint="RSS" title="RSS feed" href="{{ .Site.BaseURL }}index.xml">
+                                <i class="fa fa-rss"></i>
+                            </a></span>
+                        </h1>
+                    </div> 
+                    <div id="site-nav" class="tube">
+                        {{ partial "navigation.html" . }}
+                    </div> 
+                </div>
+            </header>
+            {{ end }}
+
+            <div id="container">
+            {{ block "main" . }}
+                {{ .Content }}
+            {{ end }}
+            </div>
+        
+            {{ block "footer" . }}
+            <footer>
+                <div id="footer-wrapper">
+                    <p class="footer-left font_small">
+                        <a title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                        <a class="button-square button-jump-top js-jump-top" href="#">
+                            <i class="fa fa-angle-up"></i>
+                        </a></p>
+                    <p class="footer-right font_small">
+                        &copy; {{ .Site.LastChange.Format "2006" }} / Powered by <a href="https://gohugo.io/">Hugo</a></p>
+                </div>
+            </footer>
+            {{ end }}
+        </div>
+        
+        {{ block "scripts" . }}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+                integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+                crossorigin="anonymous"></script>
+            <script src="{{ .Site.BaseURL }}/js/scripts.js"></script>
+            {{ template "_internal/google_analytics.html" . }}
+        {{ end }}
+    </body>
+</html>

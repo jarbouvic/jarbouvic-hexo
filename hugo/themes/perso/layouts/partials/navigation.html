@@ -1,35 +1,8 @@
-<li class="site-nav-item">
-    <a title="Work" href="{{ .URL }}">work</a>
-</li>
-{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-<li class="site-nav-item">
-    <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}
-    </a>
-</li>
-{{ end }}
-<li class="site-nav-item">
-    <a data-hint="RSS" title="RSS feed" href="{{ .Site.BaseURL }}index.xml">
-        <i class="fa fa-rss"></i>
-    </a>
-</li>
-{{ with .Site.Params.twitter }}
-<li class="site-nav-item">
-    <a data-hint="Twitter" title="Twitter" href="{{ . }}">
-        <i class="fa fa-twitter"></i>
-    </a>
-</li>
-{{ end }}
-{{ with .Site.Params.github }}
-<li class="site-nav-item">
-    <a data-hint="Github" title="Github" href="{{ . }}">
-        <i class="fa fa-github-alt"></i>
-    </a>
-</li>
-{{ end }}
-{{ with .Site.Params.linkedin }}
-<li class="site-nav-item">
-    <a data-hint="LinkedIn" title="LinkedIn" href="{{ . }}">
-        <i class="fa fa-linkedin"></i>
-    </a>
-</li>
-{{ end }}
+    <ul>
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}    
+            <li class="site-nav-item tube-{{.Weight}}">
+                <a class="station {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" title="{{.Name}}" href="{{.URL}}">{{.Name}}</a>
+            </li>
+        {{ end }}
+    </ul>
