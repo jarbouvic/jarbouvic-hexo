@@ -1,0 +1,96 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+@media screen and (min-width: $max-site-width) {
+  #wrapper {
+    header {
+      height: $header-height + 4rem;
+      #header-wrapper {
+        margin-top: 4rem;
+      }
+    }
+    #container {
+      margin-top: $header-height + 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  #wrapper {
+    header {
+      height: $header-height + 3rem;
+      #header-wrapper {
+        margin-top: 3rem;
+        #site-title {
+          bottom: 3.2rem;
+          left: 1.6rem;
+          right: initial;
+          padding: 0;
+        }
+      }
+    }
+    #container {
+      margin-top: $header-height + 3rem;
+    }
+  }
+}
+
+#wrapper {
+    &.scrolled {
+        header {
+            position: fixed;
+            height:$header-height;
+            #header-wrapper {
+              margin-top: 0;
+            }
+        }
+    }
+}
+
+header {
+  z-index:10;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  height: $header-height + 2rem;
+
+  #header-wrapper {
+      position: relative;
+      max-width: $max-site-width;
+      margin: 2rem auto 0 auto;
+      padding: 0 $padding-sides;
+  }
+}
+
+#container {
+  position: relative;
+  max-width: $max-site-width;
+  padding: 0 $padding-sides 1rem $padding-sides;
+  margin: $header-height+2rem auto $footer-height auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: $max-site-width;
+  height: $footer-height;
+  margin: 0 auto;
+  padding: 0 $padding-sides;
+
+}
+
+/* Clearfix placeholder
+ * Usage: @extend %clearfix;
+ * ---------------------------- */
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

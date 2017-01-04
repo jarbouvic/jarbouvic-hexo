@@ -1,0 +1,8 @@
+    <ul>
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}    
+            <li class="site-nav-item tube-{{.Weight}}">
+                <a class="station {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" title="{{.Name}}" href="{{.URL}}">{{.Name}}</a>
+            </li>
+        {{ end }}
+    </ul>

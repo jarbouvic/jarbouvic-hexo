@@ -1,0 +1,188 @@
+@mixin tube-colorize($color) {
+    .tube-line {
+        border-color: $color !important;
+    }
+    .station {
+        &:hover, &.active {
+            color:  $color !important;
+            &:before {
+                border-color: $color !important;
+            }
+        }
+    }
+    .stop:before {
+        background-color: $color !important;
+    }
+    .last-stop:before {
+        border-color: $color !important;
+    }
+    .breaker:before {
+        border-color: $color !important;
+    }
+}
+
+.tube-1 {
+    @include tube-colorize($tube-primary-color);
+    &.tube {
+        margin-left: calc(#{$tube-width} * 2.5);
+    }
+}
+.tube-2 { 
+    @include tube-colorize($tube-secondary-color); 
+    &.tube {
+        margin-left: calc(#{$tube-width} * 9);
+    }
+}
+.tube-3 { 
+    @include tube-colorize($tube-tertiary-color);
+    &.tube {
+        margin-left:calc(#{$tube-width} * 15.5);
+    }
+}
+
+.tube {
+    box-sizing: border-box;
+    position:relative;
+    //line-height: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .stop-name {
+        line-height: 1.25;
+        font-family: $secondary-font;
+        font-weight: 600;
+        color: $primary-color;
+    }
+    h1.stop-name, h2.stop-name, h3.stop-name {
+        display: inline;
+    }
+
+    .tube-line {
+        position: relative;
+        border-style: solid;
+        border-width: 0 0 0 $tube-width;
+        border-color: $tube-neutral-color;
+        padding-top: calc(#{$tube-width} * 3);
+        padding-left: calc(#{$tube-width} * 3);
+        padding-bottom: .1rem;
+        //line-height: 1;
+    }
+
+    .station {
+        position: relative;
+        &:before {
+            content: '';
+            background: #fff ;
+            border-style: solid;
+            border-width: calc(#{$tube-width} * 0.6);
+            border-color: $tube-border-color;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(#{$tube-width} * -.5);
+            left: calc(#{$tube-width} * -5.2);
+            width: calc(#{$tube-width} * 3.4);
+            height: calc(#{$tube-width} * 3.4);
+        }
+    }
+
+    .stop {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: calc(#{$tube-width} * 1.2);
+            height: calc(#{$tube-width} * 1);
+            top:  calc(#{$tube-width} * .65);
+            left: calc(#{$tube-width} * -3);
+            background-color: $tube-neutral-color;
+        }
+    }
+
+    .last-stop {
+        position: relative;
+        display: block;
+        &:before {
+            content: '';
+            position: absolute;
+            width: calc(#{$tube-width} * 3.4);
+            height: calc(#{$tube-width} * 2);
+            bottom:  0;
+            left: calc(#{$tube-width} * -5.2);
+            border-color: $tube-neutral-color;
+            border-width: $tube-width 0 0 0;
+            border-style: solid;
+            background-color: #fff;
+        }
+    }
+
+    .taxonomy {
+        &:before {
+           content: '';
+           position: absolute;
+           left: 0;
+           transform-origin: center left; 
+           transform: rotate(315deg);
+           width: calc(#{$tube-width} * 7   );
+           height: $tube-width;
+           border-bottom-style: solid;
+           border-bottom-width: $tube-width;
+           border-bottom-color: $note-color;
+        }
+    }
+
+    .end {
+        padding-bottom: 0;
+        padding-top: 2rem;
+    }
+
+    .start {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .prev {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .breaker {
+            bottom: -1.5rem;
+            left: calc(#{$tube-width} * -3);
+        }
+    }
+
+    .next {
+        padding-top: 3rem;
+        padding-bottom: 0;
+        a {
+            top: .2rem;
+        }
+        .breaker {
+            top: -.5rem;
+            left: calc(#{$tube-width} * -3);
+        }
+    }
+
+    .breaker {
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        width: calc(#{$tube-width} * 5);
+        height: calc(#{$tube-width} * 8);
+        z-index: 1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: calc(#{$tube-width} * 3);
+            left: calc(#{$tube-width} * -1);
+            width: calc(#{$tube-width} * 7);
+            height: calc(#{$tube-width} * 2);
+            background-color: white;
+            border-color: $tube-neutral-color;
+            border-style: solid;
+            border-width: calc(#{$tube-width} * .6) 0;
+            transform: rotate(30deg);
+        }
+    }
+
+}

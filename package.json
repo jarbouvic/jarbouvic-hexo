@@ -1,0 +1,37 @@
+{
+  "name": "jarbouvic-hugo",
+  "version": "0.1.0",
+  "description": "website",
+  "author": "Victor",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-clean-css": "^2.0.7",
+    "gulp-git": "^1.12.0",
+    "gulp-imagemin": "^3.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rev": "^7.0.0",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-size": "^2.1.0",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.2",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.0",
+    "rev-del": "^1.0.5",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.4.0"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "hugo-dev": "hugo server -wv -t perso -s .\\hugo --buildDrafts",
+    "hugo-prod": "hugo -t perso -s .\\hugo -d .\\hugo\\public"
+  }
+}

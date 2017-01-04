@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <div class="tube tube-1" itemscope="" itemtype="http://schema.org/Article">
+        <div class="tube-line top"></div>
+        {{ range .Data.Pages}}
+            <div class="tube-line">
+                <a class="stop" href="#{{ .Title | urlize }}" title="{{ .Title }}">
+                    <h2 class="stop-name" itemprop="name headline">{{ .Title }}</h2>
+                </a>
+                {{ .Content }}
+            </div>
+        {{ end }}
+        <div class="tube-line end">
+            <a class="last-stop" href="#">
+                <span class="stop-name"></span>
+            </a>    
+        </div>
+    </div>
+{{ end }}

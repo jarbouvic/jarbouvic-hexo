@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <div class="tube tube-3" itemscope="" itemtype="http://schema.org/Article">
+        <div class="tube-line top"></div>
+        <div class="tube-line">
+        {{ .Content }}
+        </div>
+        <div class="tube-line end">
+            <a class="station" href="#">
+                <span class="stop-name">End of line</span>
+            </a>    
+        </div>
+    </div>
+{{ end }}

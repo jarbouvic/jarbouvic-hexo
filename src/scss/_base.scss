@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;  
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: $selection-background;
+    text-shadow: none;
+}
+
+::selection {
+    background: $selection-background;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px dotted $border-color;
+    clear:both;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/*
+ * Images
+ */
+figure {
+    position: relative;
+    margin: 1rem 0 0 0;
+    max-width: 100%;
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        h4 {
+            margin: 0;
+            padding: .2rem;
+            font-style: normal;
+            font-weight: normal;    
+            font-size: .8rem;
+            color: #fff;
+            background-color: rgba(#000, .8);
+        }
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    img {
+        width: 100%;
+    }
+}
+
+
+.innerblock {
+    padding-top: 2rem;
+}

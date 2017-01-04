@@ -1,0 +1,48 @@
+Baseurl: https://jarbouvic.github.io
+Title: Victor Moreau
+LanguageCode: en-us
+GoogleAnalytics : XXX
+DisqusShortname: jarbouvic # Comment out to disable Disqus.
+Author:
+    Name: Victor Moreau
+
+Permalinks:
+    fixed: :title/
+    post: blog/:slug/
+
+params:
+    DateForm: Jan 2, 2006
+    DateFormFull: Mon Jan 2 2006 15:04:05 MST
+    Email: jarbouvic@gmail.com
+    FaviconFile: /img/leaf.ico
+    GitHub: //github.com/jarbouvic
+    LinkedIn: //linkedin.com/in/jarbouvic
+    Twitter: //twitter.com/jarbouvic
+    Logo:
+        Url: /img/gravatar.jpg
+        Title: Victor
+    Intro: true
+
+taxonomies:
+    tag: "tags"
+    category: "categories"
+    language: "language"
+
+Paginate: 5
+
+SectionPagesMenu: "main"
+Menu:
+    main:
+        - Name: "Me"
+          Weight: 1
+          Identifier: "about"
+          URL: "/about/"
+        - Name: "Blog"
+          Weight: 2
+          Identifier: "posts"
+          URL: "/posts/"
+        - Name: "Work"
+          Weight: 3
+          Identifier: "work"
+          URL: "/work/"
+...
