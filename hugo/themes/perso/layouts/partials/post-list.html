@@ -10,11 +10,7 @@
     {{- end }}
     {{ if $pag.HasPrev -}}
     <div class="tube-line prev">
-<<<<<<< HEAD
         <a href="{{ $pag.Prev.URL }}" title="Go to previous page" >
-=======
-        <a class="stop" href="{{ $pag.Prev.URL }}" title="Go to previous page" >
->>>>>>> 8b01ba4ac835458e6b56f1557b03a6401c6b0951
             <span class="stop-name">Newer posts...</span>
         </a>
         <div class="breaker"></div>
@@ -34,30 +30,16 @@
         </article>
     {{ end }}
     {{ if $pag.HasNext -}}
-<<<<<<< HEAD
     <div class="tube-line next end">
         <div class="breaker"></div>
         <a class="last-stop" href="{{ $pag.Next.URL }}" title="Go to next page" >
-=======
-    <div class="tube-line next">
-        <div class="breaker"></div>
-        <a class="stop" href="{{ $pag.Next.URL }}" title="Go to next page" >
->>>>>>> 8b01ba4ac835458e6b56f1557b03a6401c6b0951
             <span class="stop-name">Older posts...</span>
         </a>
     </div>
     {{- else -}}
     <div class="tube-line end">
         <a class="last-stop" href="#">
-<<<<<<< HEAD
             <span class="stop-name"></span>
         </a>
     </div>  
     {{- end }} 
-=======
-            <span class="stop-name">End of line</span>
-        </a>
-    </div>
-    {{- end }}
-    
->>>>>>> 8b01ba4ac835458e6b56f1557b03a6401c6b0951

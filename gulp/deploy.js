@@ -19,11 +19,7 @@ gulp.task('git:push', function(cb) {
 });
 
 gulp.task('git:publish', function(cb) {
-<<<<<<< HEAD
-    process.chdir('../jarbouvic.github.io');
-=======
     process.chdir('hugo/public');
->>>>>>> 8b01ba4ac835458e6b56f1557b03a6401c6b0951
     git_push(cb);
 });
 
