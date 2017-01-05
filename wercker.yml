@@ -24,11 +24,3 @@ build:
         version: "0.17"
         theme: perso
         basedir: hugo
-deploy:
-  steps:
-    - install-packages:
-        packages: git ssh-client
-    - lukevivier/gh-pages@0.2.1:
-        token: $GIT_TOKEN
-        domain: jarbouvic.com
-        basedir: hugo/public
