@@ -24,7 +24,6 @@ build:
         version: "0.17"
         theme: perso
         basedir: hugo
-
 deploy:
   steps:
     - lukevivier/gh-pages@0.2.1:
