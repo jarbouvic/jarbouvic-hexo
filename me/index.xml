@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Me-rss on Victor Moreau</title>
+    <link>http://jarbouvic.com/me/index.xml</link>
+    <description>Recent content in Me-rss on Victor Moreau</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://jarbouvic.com/me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hi!</title>
+      <link>http://jarbouvic.com/me/1_about-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://jarbouvic.com/me/1_about-me/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m Victor. I live currently in Jakarta, Indonesia. I&amp;rsquo;m passionate about software but my family comes first. I&amp;rsquo;m currently on a break to raise my two kids: the youngest is learning to scribble on the wall, the oldest is starting to read. When I&amp;rsquo;m not changing diapers, I write code. It&amp;rsquo;s hard to find the right balance between kids and code, but I aim to develop my skills at both.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>I&#39;ve got a blog</title>
+      <link>http://jarbouvic.com/me/2_i-ve-got-a-blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://jarbouvic.com/me/2_i-ve-got-a-blog/</guid>
+      <description>&lt;p&gt;If you look further, you might read a few things I wrote since I was in college. Mostly personal stuff, random thoughts and the occasional rumbling. Don&amp;rsquo;t look for something structured or meaningful, it&amp;rsquo;s mostly a fragmented piece of myself hanging out in the interwebs. I keep it there because I&amp;rsquo;m sentimental and I wish to dedicate more time to blogging in the future. By the way, I&amp;rsquo;m french, so if some of it sounds french to you, well that&amp;rsquo;s normal.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Things I love</title>
+      <link>http://jarbouvic.com/me/3_things-i-love/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://jarbouvic.com/me/3_things-i-love/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Quiet. I love quiet. And music. This is what saves my soul. Leave me alone for a few hours, I&amp;rsquo;ll love you for it.&lt;/li&gt;
+&lt;li&gt;AI. I&amp;rsquo;m fascinated by it. I never stepped seriously into it, don&amp;rsquo;t know why really. Seems that AI is becoming a reality during this era. I&amp;rsquo;d love to be part of it.&lt;/li&gt;
+&lt;li&gt;Coffee. I need it. Every day. Please.&lt;/li&gt;
+&lt;li&gt;The web. I&amp;rsquo;ve been on it since 56k modems. It&amp;rsquo;s my favorite lego box.&lt;/li&gt;
+&lt;li&gt;My family. My wife. My kids. But hey you&amp;rsquo;ve got that already.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Things I fear</title>
+      <link>http://jarbouvic.com/me/4_things-i-fear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://jarbouvic.com/me/4_things-i-fear/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Humans. We&amp;rsquo;re so fucked up. One of my biggest fear and my biggest hope at the same time.&lt;/li&gt;
+&lt;li&gt;Javascript. Yep. It&amp;rsquo;s a monster. Between us, it&amp;rsquo;s love and hate. But I&amp;rsquo;m working on our relationship and it&amp;rsquo;s getting better now.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
