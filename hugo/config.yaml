@@ -1,27 +1,36 @@
 Baseurl: http://jarbouvic.com
 Title: Victor Moreau
 LanguageCode: en-us
-GoogleAnalytics : XXX
-DisqusShortname: jarbouvic # Comment out to disable Disqus.
-Author:
-    Name: Victor Moreau
+GoogleAnalytics : UA-12953608-6
+DisqusShortname: jarbouvic
 
 Permalinks:
     fixed: :title/
     post: blog/:slug/
 
 params:
-    DateForm: Jan 2, 2006
-    DateFormFull: Mon Jan 2 2006 15:04:05 MST
-    Email: jarbouvic@gmail.com
-    FaviconFile: /img/leaf.ico
-    GitHub: //github.com/jarbouvic
-    LinkedIn: //linkedin.com/in/jarbouvic
-    Twitter: //twitter.com/jarbouvic
-    Logo:
-        Url: /img/gravatar.jpg
-        Title: Victor
-    Intro: true
+    author: Victor Moreau
+    email: jarbouvic@gmail.com
+    gitHub:
+        name: jarbouvic
+        url: //github.com/jarbouvic
+    linkedIn: 
+        name: jarbouvic
+        url: //linkedin.com/in/jarbouvic
+    twitter:
+        name: jarbouvic
+        url: //twitter.com/jarbouvic
+    description: "Hi! Victor is my name. I live currently in Jakarta, Indonesia. I'm passionate about software. When I'm not changing diapers, I write code."
+    keywords: 
+        - blog
+        - personal
+        - software
+        - family
+        - house-husband
+        - development
+        - code
+        - life
+        - website
 
 taxonomies:
     tag: "tags"
@@ -35,14 +44,17 @@ Menu:
     main:
         - Name: "Me"
           Weight: 1
-          Identifier: "about"
-          URL: "/about/"
+          Identifier: "me"
+          URL: "/me/"
         - Name: "Blog"
           Weight: 2
-          Identifier: "posts"
-          URL: "/posts/"
+          Identifier: "blog"
+          URL: "/blog/"
         - Name: "Work"
           Weight: 3
           Identifier: "work"
           URL: "/work/"
+
+enableRobotsTXT: true
+pluralizelisttitles: false
 ...

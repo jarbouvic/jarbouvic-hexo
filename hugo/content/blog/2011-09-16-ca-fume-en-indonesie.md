@@ -1,6 +1,4 @@
 ---
-
-
 date: 2011-09-16T23:57:00+00:00
 comments: false
 categories: 
